@@ -2,21 +2,17 @@
 'use strict';
 
 var React = require("react");
-
-function handleClick(_event) {
-  console.log("clicked!");
-  return /* () */0;
-}
+var Panel$ProbabilityDashboard = require("./components/Panel.bs.js");
+var StateProvider$ProbabilityDashboard = require("./providers/StateProvider.bs.js");
 
 function App(Props) {
   Props.message;
-  return React.createElement("div", {
-              onClick: handleClick
-            }, "Hello world");
+  return React.createElement("div", undefined, React.createElement(StateProvider$ProbabilityDashboard.make, {
+                  children: React.createElement(Panel$ProbabilityDashboard.make, { })
+                }));
 }
 
 var make = App;
 
-exports.handleClick = handleClick;
 exports.make = make;
 /* react Not a pure module */
