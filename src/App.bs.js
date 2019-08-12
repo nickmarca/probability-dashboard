@@ -3,13 +3,14 @@
 
 var React = require("react");
 var Panel$ProbabilityDashboard = require("./components/Panel.bs.js");
+var Stats$ProbabilityDashboard = require("./components/Stats.bs.js");
 var StateProvider$ProbabilityDashboard = require("./providers/StateProvider.bs.js");
 
 function App(Props) {
   Props.message;
   return React.createElement("div", undefined, React.createElement(StateProvider$ProbabilityDashboard.make, {
-                  children: React.createElement(Panel$ProbabilityDashboard.make, { })
-                }));
+                  children: null
+                }, React.createElement(Stats$ProbabilityDashboard.make, { }), React.createElement(Panel$ProbabilityDashboard.make, { })));
 }
 
 var make = App;

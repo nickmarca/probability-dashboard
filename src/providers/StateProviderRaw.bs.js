@@ -3,7 +3,18 @@
 
 var React = require("react");
 
-var stateContext = React.createContext(undefined);
+var c_000 = /* record */[/* value */1];
+
+function c_001(param) {
+  return /* () */0;
+}
+
+var c = /* tuple */[
+  c_000,
+  c_001
+];
+
+var stateContext = React.createContext(c);
 
 function makeProps(value, children, param) {
   return {
@@ -13,8 +24,6 @@ function makeProps(value, children, param) {
 }
 
 var make = stateContext.Provider;
-
-var c = undefined;
 
 exports.c = c;
 exports.stateContext = stateContext;

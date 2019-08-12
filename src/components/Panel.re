@@ -1,11 +1,9 @@
 [@react.component]
 let make = () => {
-  switch (Hooks.useStateValue()) {
-  | None => <div />
-  | Some((state, dispatch)) =>
-    <div>
-      "Current State Value: "->React.string
-      {React.string(string_of_int(state.value))}
-    </div>
-  };
+  let (state, dispatch) = Hooks.useStateValue();
+  let increaseValue = _ => dispatch(Add(1));
+
+  <div>
+    <button onClick=increaseValue> "Add more 1"->React.string </button>
+  </div>;
 };
